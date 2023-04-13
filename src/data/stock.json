@@ -1,0 +1,15 @@
+{
+  "Fondo para Pizza": {
+    "date": {
+      "march 15": {
+        "used": 10000,
+        "left": 170000
+      },
+      "march 16": {
+        "used": 18000,
+        "left": 152000
+      }
+    },
+    "total_amount": 152000
+  }
+}

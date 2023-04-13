@@ -1,0 +1,22 @@
+[
+  {
+    "pedidos": [
+      {
+        "cliente": "francisco",
+        "carrito": [
+          { "nombre": "pizza de muzzarella", "cantidad": 1 },
+          { "nombre": "pizza de muzzarella", "cantidad": 1 },
+          { "nombre": "pizza de muzzarella", "cantidad": 1 },
+          { "nombre": "pizza de muzzarella", "cantidad": 1 },
+          { "nombre": "pizza de muzzarella", "cantidad": 1 },
+          { "nombre": "pizza de muzzarella", "cantidad": 1 },
+          { "nombre": "pizza de muzzarella", "cantidad": 1 },
+          { "nombre": "pizza de muzzarella", "cantidad": 1 }
+        ],
+        "total": 1500
+      }
+    ],
+    "fecha": "2023-04-10",
+    "id": "OWBfXHvNy4rpoCk-ftCuw"
+  }
+]

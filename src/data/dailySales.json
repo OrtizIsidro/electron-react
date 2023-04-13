@@ -1,0 +1,58 @@
+[
+  {
+    "id": "13j4h23j4kl312jh31",
+    "fecha": "4-04-23",
+    "pedidos": [
+      {
+        "client": {
+          "name": "pablo",
+          "address": {
+            "street": "olavarria",
+            "number": "3095",
+            "location": "-34.4974250793457,-58.8729286193848"
+          }
+        },
+
+        "cart": [
+          {
+            "nombre": "fsdfs",
+            "venta": "2223",
+            "categoria": "menu",
+            "ingredientes": [
+              {
+                "supplieId": "uUPgY12vHxklgCcxmDaRs",
+                "nombre": "barraza",
+                "cantidad": "22"
+              }
+            ],
+            "precios": {
+              "costo": "220",
+              "bruto": 2003,
+              "porcentaje": "910.454%"
+            },
+            "id": "xiowCQ1BPCx874FuB2b7a"
+          },
+          {
+            "nombre": "fsdfs",
+            "venta": "2223",
+            "categoria": "menu",
+            "ingredientes": [
+              {
+                "supplieId": "uUPgY12vHxklgCcxmDaRs",
+                "nombre": "barraza",
+                "cantidad": "22"
+              }
+            ],
+            "precios": {
+              "costo": "220",
+              "bruto": 2003,
+              "porcentaje": "910.454%"
+            },
+            "id": "xiowCQ1BPCx874FuB2b7a"
+          }
+        ],
+        "total": 1500
+      }
+    ]
+  }
+]

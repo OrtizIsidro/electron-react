@@ -1,0 +1,30 @@
+[
+  {
+    "nombre": "isidro",
+    "telefono": "1134909484",
+    "fecha de registro": "2023-04-10",
+    "direccion": [
+      {
+        "calle": "sdfsd",
+        "numero": "2121",
+        "coordenadas": "2123123",
+        "costo": "22"
+      }
+    ],
+    "id": "SWJA5aoiZwtC77Vnt9mM3"
+  },
+  {
+    "nombre": "isidro",
+    "telefono": "1164848474",
+    "fecha de registro": "2023-04-10",
+    "direccion": [
+      {
+        "calle": "salvador lentini",
+        "numero": "244",
+        "coordenadas": "",
+        "costo": "100"
+      }
+    ],
+    "id": "fr99NLCN9tfb8NphD3vIp"
+  }
+]

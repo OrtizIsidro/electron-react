@@ -1,0 +1,11 @@
+el stock le pide datos al supplies, cosa que no tenga nada que ver con la  cantidad de mercaderia que hay disponible
+asi mismo, el stock le tiene que pedir datos al dailySales para calcular la cantidad vendida en ese mismo dia, y de 
+esa forma tener un antes y despues para comparar y no tener datos perdidos, y poder descontar del stock, la cantidad
+ya vendida.
+
+asi mismo el dailySales debe tener una seccion de profit del dia, y asi, poder visualizar la ganancia del dia
+
+
+caso de cambio de direccion - tener en cuenta
+
+agregar stock

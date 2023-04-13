@@ -1,25 +1,21 @@
 // Disable no-unused-vars, broken for spread args
 /* eslint no-unused-vars: off */
 import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';
-
+import { CHANNEL } from '../renderer/handleLists';
 export type Channels = 'ipc-example';
 
 const electronHandler = {
-  ipcRenderer: {
-    sendMessage(channel: Channels, args: unknown[]) {
-      ipcRenderer.send(channel, args);
-    },
-    on(channel: Channels, func: (...args: unknown[]) => void) {
-      const subscription = (_event: IpcRendererEvent, ...args: unknown[]) =>
-        func(...args);
-      ipcRenderer.on(channel, subscription);
-
-      return () => {
+  handleLists: {
+    get(channel: string, callback: any) {
+      const subscription = (event: any, message: any) => {
+        callback(message);
         ipcRenderer.removeListener(channel, subscription);
       };
+      ipcRenderer.send(CHANNEL, { channel, type: 'get' });
+      ipcRenderer.on(channel, subscription);
     },
-    once(channel: Channels, func: (...args: unknown[]) => void) {
-      ipcRenderer.once(channel, (_event, ...args) => func(...args));
+    add(channel: string, data: Object) {
+      ipcRenderer.send(CHANNEL, { channel, data, type: 'add' });
     },
   },
 };

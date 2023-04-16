@@ -6,7 +6,7 @@ const BasePopUp = ({ children, title, styles, button }) => {
         top: '50%',
         left: '50%',
         border: '1px solid black',
-        width: '50%',
+        width: '80%',
         transform: 'translate(-50%, -50%)',
         backgroundColor: 'white',
       }}

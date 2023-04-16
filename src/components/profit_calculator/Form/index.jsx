@@ -14,7 +14,10 @@ function Form({ inputs, onSubmit, render, submitRef }) {
 
   const arrayHandler = {
     add: ({ name: input, value }) =>
-      setForm((form) => ({ ...form, [input]: [...form[input], value] })),
+      setForm((form) => ({
+        ...form,
+        [input]: [...form[input], value],
+      })),
     remove: ({ name: input, id }) =>
       setForm((form) => ({
         ...form,

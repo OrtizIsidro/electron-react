@@ -1,1 +1,55 @@
-[{"nombre":"ejemplo","venta":"1500","categoria":"menu","ingredientes":[{"supplieId":"zIeusWH9h-kz3krGbGrfe","nombre":"dsaf","cantidad":"11222"}],"precios":{"costo":11222,"bruto":-9722,"porcentaje":"-86.633%"},"id":"Kz8ayD_H-qA7jyYAiKZdr"}]
+[
+  {
+    "nombre": "muzzarella",
+    "venta": "1450",
+    "categoria": "menu",
+    "ingredientes": [
+      {
+        "supplieId": "IVhIGxv73LoLrr0Vftk1J",
+        "nombre": "barraza",
+        "cantidad": "250"
+      },
+      {
+        "supplieId": "KmsxyR4gazYkzhyEd0ZUk",
+        "nombre": "harina 0000",
+        "cantidad": "250"
+      },
+      {
+        "supplieId": "aZOeXndLCdgSWfEO5Trz2",
+        "nombre": "tomate triturado kayfar",
+        "cantidad": "150"
+      }
+    ],
+    "precios": { "costo": 472.75, "bruto": 977.25, "porcentaje": "206.716%" },
+    "id": "aJtKHAPVUTaGR-bc2kbL2"
+  },
+  {
+    "nombre": "pizza de jamon",
+    "venta": "1550",
+    "categoria": "menu",
+    "ingredientes": [
+      {
+        "supplieId": "DnNb9oLv5LEMAhaRBfeuH",
+        "nombre": "jamon",
+        "cantidad": "150"
+      },
+      {
+        "supplieId": "KmsxyR4gazYkzhyEd0ZUk",
+        "nombre": "harina 0000",
+        "cantidad": "250"
+      },
+      {
+        "supplieId": "IVhIGxv73LoLrr0Vftk1J",
+        "nombre": "barraza",
+        "cantidad": "260"
+      },
+      {
+        "supplieId": "aZOeXndLCdgSWfEO5Trz2",
+        "nombre": "tomate triturado kayfar",
+        "cantidad": "150"
+      }
+    ],
+    "precios": { "costo": 652.75, "bruto": 897.25, "porcentaje": "137.456%" },
+    "id": "j2FCEuGeGUsa_hc7eJHiP"
+  }
+]

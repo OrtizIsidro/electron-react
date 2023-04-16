@@ -1,4 +1,4 @@
-const Text = ({ value, name: key, onChange, form }) => {
+const Text = ({ name: key, onChange, form }) => {
   return (
     <input
       value={form[key]}
@@ -6,7 +6,7 @@ const Text = ({ value, name: key, onChange, form }) => {
       className="mb-1"
       autoComplete="off"
       onChange={(e) => onChange(key, e.target.value)}
-      placeholder={value || key}
+      placeholder={form[key] || key}
     />
   );
 };

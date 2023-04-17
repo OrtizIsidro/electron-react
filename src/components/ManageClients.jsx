@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import PopUp from './DailySales/PopUP';
 import Form from './profit_calculator/Form';
 import Number from './profit_calculator/Form/Number';
@@ -10,6 +10,12 @@ const refactorInputs = (inputs) => inputs.map((val) => ({ name: val }));
 
 const ManageClients = () => {
   const [clientes, setClientes] = useData('clients');
+  const [direccionForm, setDireccionForm] = useState(
+    refactorInputs(['calle', 'numero', 'coordenadas', 'envio'])
+  );
+  const [mainForm, setMainForm] = useState(
+    refactorInputs(['nombre', 'telefono', 'fecha de registro', 'direccion'])
+  );
   const closeDireccion = useRef();
   const closeMain = useRef();
   const handleSubmit = (values) => {
@@ -24,12 +30,7 @@ const ManageClients = () => {
       <h1>administrar clientes</h1>
       <PopUp title={'agregar cliente'} closeRef={closeMain}>
         <Form
-          inputs={refactorInputs([
-            'nombre',
-            'telefono',
-            'fecha de registro',
-            'direccion',
-          ])}
+          inputs={mainForm}
           onSubmit={handleSubmit}
           render={([string, { add }, form]) => (
             <>
@@ -55,15 +56,10 @@ const ManageClients = () => {
                 <p>direccion:</p>
                 <PopUp title={'agregar'} closeRef={closeDireccion}>
                   <Form
-                    inputs={refactorInputs([
-                      'calle',
-                      'numero',
-                      'coordenadas',
-                      'envio',
-                    ])}
+                    inputs={direccionForm}
                     onSubmit={(values) => {
                       closeDireccion.current.click();
-                      add({ name: 'direccion', value: values });
+                      string({ name: 'direccion', value: values });
                     }}
                     render={([stringD, _, formD]) => (
                       <>

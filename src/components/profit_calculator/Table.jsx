@@ -1,5 +1,8 @@
 const Table = ({ data, edit, style }) => {
-  const keys = Object.keys(data[0] || {});
+  const keys = Array.isArray(data)
+    ? Object.keys(data[0] || {})
+    : Object.keys(data);
+  const mapData = Array.isArray(data) ? data : [data];
   const titles = keys.filter((val) => val !== 'id');
   const Theads = titles.map((value, index) => (
     <th key={index + 101} style={{ padding: '5px', border: '1px solid' }}>
@@ -12,7 +15,7 @@ const Table = ({ data, edit, style }) => {
         <tr>{Theads}</tr>
       </thead>
       <tbody>
-        {data?.map(({ id, ...value }, index) => {
+        {mapData?.map(({ id, ...value }, index) => {
           const values = Object.values(value);
           return (
             <tr onClick={() => edit(index)} key={index + 102}>

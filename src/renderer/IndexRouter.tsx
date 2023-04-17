@@ -29,18 +29,11 @@ export default function IndexRouter() {
           <li>
             <NavLink to={'/manage_clients'}>administrar clientes</NavLink>
           </li>
-          <li>
-            <NavLink to={'/statistics'}>estadisticas</NavLink>
-          </li>
         </ul>
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="profit_calculator/*" element={<ProfitCalculator />} />
-        <Route
-          path="statistics"
-          element={<Statistics labels={[]} label={[]} dependencie={'none'} />}
-        />
         <Route path="daily_sales" element={<DailySales />} />
         <Route path="manage_clients" element={<ManageClients />} />
       </Routes>

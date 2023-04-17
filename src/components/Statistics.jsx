@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
-const Statistics = ({ labels = [], label, dependencie }) => {
+const Statistics = ({ labels, pedidos, dinero, dependencie }) => {
   useEffect(() => {
     const chart = new Chart('myChart', {
       type: 'bar',
@@ -9,8 +9,13 @@ const Statistics = ({ labels = [], label, dependencie }) => {
         labels: [...labels],
         datasets: [
           {
-            label: '# of Votes',
-            data: [...label],
+            label: '# de pedidos',
+            data: [...pedidos],
+            borderWidth: 2,
+          },
+          {
+            label: '$ en total',
+            data: [...dinero],
             borderWidth: 2,
           },
         ],

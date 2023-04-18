@@ -1,4 +1,4 @@
-const Number = ({ value, name: key, onChange, form }) => {
+function Number({ value, name: key, onChange, form }) {
   return (
     <input
       value={form[key]}
@@ -9,5 +9,5 @@ const Number = ({ value, name: key, onChange, form }) => {
       placeholder={value || key}
     />
   );
-};
+}
 export default Number;

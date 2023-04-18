@@ -1,13 +1,15 @@
 import { nanoid } from 'nanoid';
 
+// eslint-disable-next-line camelcase
 export const calc_total = (ingredientes, supplies) => {
   let total = 0;
   ingredientes.forEach(({ supplieId, cantidad }) =>
+    // eslint-disable-next-line no-return-assign, camelcase
     supplies.forEach(({ id, total_por_gramo }) =>
+      // eslint-disable-next-line camelcase
       id === supplieId ? (total += total_por_gramo * cantidad) : null
     )
   );
-  console.log({ ingredientes, supplies, total });
 
   return total;
 };
@@ -22,6 +24,7 @@ export const getDecimal = (num, length) => {
   return result;
 };
 
+// eslint-disable-next-line no-underscore-dangle
 export const _add = (previusValue, obj, action) => {
   const { id } = obj;
   const actions = {
@@ -32,13 +35,14 @@ export const _add = (previusValue, obj, action) => {
   const result = actions[action];
   return result;
 };
+
 export const today = () => {
   const date = new Date();
   let dia = date.getDate();
   let mes = date.getMonth() + 1;
-  let year = date.getFullYear();
-  if (dia < 10) dia = '0' + dia;
-  if (mes < 10) mes = '0' + mes;
+  const year = date.getFullYear();
+  if (dia < 10) dia = `0${dia}`;
+  if (mes < 10) mes = `0${mes}`;
   const hoy = `${year}-${mes}-${dia}`;
   return hoy;
 };

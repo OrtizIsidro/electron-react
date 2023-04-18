@@ -5,9 +5,7 @@ import {
   NavLink,
 } from 'react-router-dom';
 import Home from 'components/Home';
-import NavigationBar from 'renderer/NavigationBar';
 import ProfitCalculator from 'components/ProfitCalculator';
-import Statistics from 'components/Statistics';
 import './styles.css';
 import DailySales from 'components/DailySales';
 import ManageClients from 'components/ManageClients';
@@ -18,16 +16,13 @@ export default function IndexRouter() {
       <div>
         <ul style={{ display: 'flex', flexDirection: 'column' }}>
           <li>
-            <NavLink to={'/'}>Home</NavLink>
+            <NavLink to="/Daily_sales">registro diario</NavLink>
           </li>
           <li>
-            <NavLink to={'/profit_calculator'}>profit calculator</NavLink>
+            <NavLink to="/profit_calculator">Menu e insumos</NavLink>
           </li>
           <li>
-            <NavLink to={'/Daily_sales'}>Daily sales</NavLink>
-          </li>
-          <li>
-            <NavLink to={'/manage_clients'}>administrar clientes</NavLink>
+            <NavLink to="/manage_clients">administracion de clientes</NavLink>
           </li>
         </ul>
       </div>
